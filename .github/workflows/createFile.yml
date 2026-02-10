@@ -36,7 +36,7 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: file.txt
+          name: sunkuFile.txt
           path: sunkuFolder/*.txt
           # retention-days: 8
       
