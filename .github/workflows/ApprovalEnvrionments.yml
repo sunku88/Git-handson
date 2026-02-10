@@ -65,6 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     needs: devDeploy
+    if : github.ref == 'refs/heads/master'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
