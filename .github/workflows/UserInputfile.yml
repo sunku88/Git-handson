@@ -32,7 +32,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Create a Folder
-        run: mkdir sunkuFolder && cd sunkuFolder &&  echo ${{inputs.enter_your_message_for_file}}" : SSPC" > sunkuFile.txt
+        run: mkdir sunkuFolder && cd sunkuFolder &&  echo ${{inputs.enter_your_message_for_file}} > sunkuFile.txt
 
       # Runs a set of commands using the runners shell
       - name: Create file
