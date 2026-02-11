@@ -1,0 +1,12 @@
+---
+- name: Copy sspc.txt to slave machine
+  hosts: webservers
+  become: yes  # if you need root privileges
+  tasks:
+    - name: Copy sspc.txt to remote /home/ubuntu/
+      copy:
+        src: ./sspc.txt
+        dest: /home/ubuntu/sspc.txt
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'
