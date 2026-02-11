@@ -53,6 +53,6 @@ jobs:
           run: terraform plan --var-file="terraform.tfvar"
           
         - name: Terraform apply
-          run: terraform apply --var-file="terraform.tfvar"
+          run: terraform apply --var-file="terraform.tfvar" -auto-approve
 
           
