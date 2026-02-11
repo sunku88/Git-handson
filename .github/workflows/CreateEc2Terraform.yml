@@ -19,6 +19,9 @@ jobs:
   terraform:
       name: Terraform
       runs-on: ubuntu-latest
+      defaults:
+        run:
+          working-directory: ./terraform
       env:
         AWS_REGION: us-east-1
       steps:
@@ -38,7 +41,7 @@ jobs:
             aws-region: us-east-1
 
         - name: Terraform Init
-          run: cd GITHUB_ACTION_PATH/terraform  && terraform init
+          run:  terraform init
 
         # - name: Terraform Format Check
         #   run: cd GITHUB_ACTION_PATH/terraform  &&  terraform fmt -check
@@ -47,9 +50,9 @@ jobs:
         #   run: terraform validate
 
         - name: Terraform Plan
-          run: cd GITHUB_ACTION_PATH/terraform  &&  terraform plan --var-file="terraform.tfvar"
+          run: terraform plan --var-file="terraform.tfvar"
           
         - name: Terraform apply
-          run: cd GITHUB_ACTION_PATH/terraform  &&  terraform apply --var-file="terraform.tfvar"
+          run: terraform apply --var-file="terraform.tfvar"
 
           
