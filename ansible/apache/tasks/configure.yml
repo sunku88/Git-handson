@@ -1,7 +1,7 @@
 ---
  -  name: send copt.html file
     copy:
-      src: copt.html
+      src: copy.html
       dest: /var/www/html
     notify:
       - restart apache2 service
