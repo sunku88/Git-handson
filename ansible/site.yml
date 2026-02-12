@@ -3,3 +3,5 @@
    become: yes
    roles:
      - apache
+# site.yml file is for runnning the playbook and it will call the tasks and vars files for apache role. 
+# it will use the inventory file only for slave machine.
