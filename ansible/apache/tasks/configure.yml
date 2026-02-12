@@ -2,6 +2,6 @@
  -  name: send copt.html file
     copy:
       src: copt.html
-      dest: /home/ubuntu
+      dest: /var/www/html
     notify:
       - restart apache2 service
