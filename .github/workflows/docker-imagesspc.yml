@@ -31,6 +31,7 @@ jobs:
 
       - name: Build Docker image
         run: |
+          cd docker
           docker build -t ${{ secrets.ECR_REPOSITORY }}:${IMAGE_TAG} .
 
       - name: Tag Docker image
