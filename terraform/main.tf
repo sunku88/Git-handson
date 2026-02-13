@@ -15,3 +15,23 @@
     Name = "sunkuec2"
   }
 }
+
+resource "aws_ecr_repository" "my_ecr" {
+  name                 = var.repository_name
+  image_tag_mutability = "MUTABLE"
+
+  tags = {
+    Environment = var.environment
+    Project     = "demo"
+  }
+}
+
+resource "aws_ecr_repository" "my_ecr2" {
+  name                 = "sspc-ecr"
+  image_tag_mutability = "MUTABLE"
+
+  tags = {
+    Environment = var.environment
+    Project     = "demo"
+  }
+}
