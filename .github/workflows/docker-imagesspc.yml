@@ -18,4 +18,4 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       # run: cd docker && ls
-      run: cd dcoker && docker build . --file Dockerfile --tag 980637429038.dkr.ecr.us-east-1.amazonaws.com/sspc-ecr:latest
+      run: cd docker && docker build . --file Dockerfile --tag 980637429038.dkr.ecr.us-east-1.amazonaws.com/sspc-ecr:latest
