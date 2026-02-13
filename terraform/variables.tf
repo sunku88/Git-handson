@@ -21,3 +21,11 @@ variable "environment" {
   type        = string
   default     = "prod"
 }
+
+variable "vpc_id" {
+  default = "vpc-0bc0de2b82fd58108"
+}
+
+variable "cluster_name" {
+  default = "sspc-eks-cluster"
+}
